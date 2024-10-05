@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 export const TextButton = (
   props: ComponentPropsWithoutRef<"button"> & { color?: string }
 ) => {
-  const {className, children, color} = props;
+  const { className, children, color } = props;
   return (
     <button
       className={twMerge(
