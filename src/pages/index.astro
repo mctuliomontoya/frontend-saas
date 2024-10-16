@@ -8,6 +8,7 @@ import { LatestPosts } from "../sections/LatestPosts";
 import { getCollection } from "astro:content";
 import { TestimonialsSection } from "../sections/Testimonials";
 import { CallToAction } from "../sections/CallToAction";
+import { Footer } from "../sections/Footer";
 
 const posts = await getCollection("blog");
 const latestPosts = posts
@@ -22,10 +23,11 @@ const latestPosts = posts
 
 <DefaultLayout>
   <HeaderSection />
-  <HeroSection />
+  <HeroSection client:load />
   <FeaturesCardsSection />
   <FeaturesGridSection />
   <LatestPosts posts={latestPosts} />
   <TestimonialsSection />
   <CallToAction />
+  <Footer />
 </DefaultLayout>
