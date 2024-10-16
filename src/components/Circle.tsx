@@ -19,7 +19,7 @@ export const Circle = (
         transition={{ ease: "linear", duration: 15, repeat: Infinity }}
         className={twMerge(
           "absolute inset-0 rounded-full outline outline-[6px] -outline-offset-[6px] outline-fuchsia-500/10 border-[6px] border-transparent",
-          animate && "border-t-fuchsia-500/30"
+          animate && "border-t-fuchsia-500/10"
         )}
       />
       {children}
