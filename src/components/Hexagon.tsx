@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import {
+  useEffect,
   useLayoutEffect,
   useRef,
   useState,
@@ -20,7 +21,7 @@ export const Hexagon = (
   const pathRef = useRef<SVGPathElement>(null);
   const [totalPathLength, setTotalPathLength] = useState<number>();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const pathLength = pathRef.current?.getTotalLength();
     if (!pathLength) return;
     const scaledPathLength = (pathLength * size) / 82;
