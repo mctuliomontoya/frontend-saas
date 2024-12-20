@@ -30,7 +30,7 @@ const positions = await getCollection('positions')
           href="/contact"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewPort={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, ease: 'easeIn' }}
         >
           <Card color={getColorFromPositionCategory(category)} buttonText="Apply Now">
